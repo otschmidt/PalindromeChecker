@@ -18,6 +18,8 @@ public boolean palindrome(String word)
 {
   //your code here
   String bob = new String();
+    return word.toLowerCase();
+    
   for(int i=1; i<word.length()+1; i++)
     bob = bob + word.substring(word.length()-i, word.length()-i+1);
     if(bob.equals(word))
@@ -27,6 +29,19 @@ public boolean palindrome(String word)
   
   return false;
 }
+
+
+
+public String noSpaces(String sWord){
+  String bob = new String();
+  for(int i=0;i<sWord.length();i++)
+    if(!sWord.substring(i,i+1).equals(" "))
+      bob = bob + sWord.substring(i,i+1);
+      
+  return bob;
+}
+
+
 public String reverse(String str)
 {
     String sNew = new String();
@@ -36,5 +51,16 @@ public String reverse(String str)
     
     return sNew;
 }
+/*
+public int numLetters(String sString){
+  int a=0;
+  for(int i=0;i<sString.length();i++)
+  {
+    if(Character.isLetter(sString.charAt(i))==true)
+      a++;
+  }
+  return a;
+}
+*/
 
 
